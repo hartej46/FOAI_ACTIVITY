@@ -16,7 +16,7 @@ export default function Navbar() {
         [0, 100],
         ["rgba(26, 26, 26, 0)", "rgba(26, 26, 26, 0.8)"]
     );
-    const backdropBlur = useTransform(scrollY, [0, 100], ["blur(0px)", "blur(12px)"]);
+    const backdropFilter = useTransform(scrollY, [0, 100], ["blur(0px)", "blur(12px)"]);
     const borderBottom = useTransform(
         scrollY,
         [0, 100],
@@ -25,7 +25,7 @@ export default function Navbar() {
 
     return (
         <motion.nav
-            style={{ backgroundColor, backdropBlur, borderBottom }}
+            style={{ backgroundColor, backdropFilter, borderBottom }}
             className="fixed top-0 left-0 right-0 z-50 px-6 py-4 flex items-center justify-between"
         >
             <motion.div
