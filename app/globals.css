@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pagani-black: #1a1a1a;
+  --color-pagani-gold: #D4AF37;
+  --color-bright-gold: #FFD700;
+  --color-carbon-gray: #2a2a2a;
+
+  --font-orbitron: var(--font-orbitron);
+  --font-rajdhani: var(--font-rajdhani);
+}
+
+:root {
+  --background: #1a1a1a;
+  --foreground: #ffffff;
+}
+
+::selection {
+  background-color: var(--color-pagani-gold);
+  color: black;
+}
+
+body {
+  background-color: var(--color-pagani-black);
+  color: white;
+  @apply font-rajdhani;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-orbitron tracking-wider uppercase;
+}
